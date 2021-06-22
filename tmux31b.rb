@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class Tmux31b < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
@@ -5,11 +8,10 @@ class Tmux31b < Formula
   sha256 "d93f351d50af05a75fe6681085670c786d9504a5da2608e481c47cf5e1486db9"
 
   bottle do
-    cellar :any
     rebuild 1
-    sha256 "785c1b2e2518478621eb5ac894b3f0ed06d8fdc4d223dd476451ab26974e3803" => :catalina
-    sha256 "a8fb2df02c2e094404b6c56e2b9d15a35abd012913771ad311e08cc3572f0e4b" => :mojave
-    sha256 "5d43e03fc71740ec38c98b309adb2b6d198a20fcb14f76bc163232fda61fac23" => :high_sierra
+    sha256 cellar: :any, catalina:    "785c1b2e2518478621eb5ac894b3f0ed06d8fdc4d223dd476451ab26974e3803"
+    sha256 cellar: :any, mojave:      "a8fb2df02c2e094404b6c56e2b9d15a35abd012913771ad311e08cc3572f0e4b"
+    sha256 cellar: :any, high_sierra: "5d43e03fc71740ec38c98b309adb2b6d198a20fcb14f76bc163232fda61fac23"
   end
 
   head do
